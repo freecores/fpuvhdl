@@ -1,4 +1,4 @@
--- VHDL Entity HAVOC.FPadd.symbol
+-- VHDL Entity work.FPadd.symbol
 --
 -- Created by
 -- Guillermo Marcus, gmarcus@ieee.org
@@ -27,7 +27,7 @@ ENTITY FPadd IS
 END FPadd ;
 
 --
--- VHDL Architecture HAVOC.FPadd.pipeline
+-- VHDL Architecture work.FPadd.pipeline
 --
 -- Created by
 -- Guillermo Marcus, gmarcus@ieee.org
@@ -42,8 +42,6 @@ END FPadd ;
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
-
-LIBRARY HAVOC;
 
 ARCHITECTURE pipeline OF FPadd IS
 
@@ -237,12 +235,12 @@ ARCHITECTURE pipeline OF FPadd IS
 
    -- Optional embedded configurations
    -- pragma synthesis_off
-   FOR ALL : FPadd_stage1 USE ENTITY HAVOC.FPadd_stage1;
-   FOR ALL : FPadd_stage2 USE ENTITY HAVOC.FPadd_stage2;
-   FOR ALL : FPadd_stage3 USE ENTITY HAVOC.FPadd_stage3;
-   FOR ALL : FPadd_stage4 USE ENTITY HAVOC.FPadd_stage4;
-   FOR ALL : FPadd_stage5 USE ENTITY HAVOC.FPadd_stage5;
-   FOR ALL : FPadd_stage6 USE ENTITY HAVOC.FPadd_stage6;
+   FOR ALL : FPadd_stage1 USE ENTITY work.FPadd_stage1;
+   FOR ALL : FPadd_stage2 USE ENTITY work.FPadd_stage2;
+   FOR ALL : FPadd_stage3 USE ENTITY work.FPadd_stage3;
+   FOR ALL : FPadd_stage4 USE ENTITY work.FPadd_stage4;
+   FOR ALL : FPadd_stage5 USE ENTITY work.FPadd_stage5;
+   FOR ALL : FPadd_stage6 USE ENTITY work.FPadd_stage6;
    -- pragma synthesis_on
 
 

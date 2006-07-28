@@ -55,8 +55,6 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 
-LIBRARY HAVOC;
-
 ARCHITECTURE struct OF FPmul_stage3 IS
 
    -- Architecture declarations
@@ -94,8 +92,8 @@ ARCHITECTURE struct OF FPmul_stage3 IS
 
    -- Optional embedded configurations
    -- pragma synthesis_off
-   FOR ALL : FPnormalize USE ENTITY HAVOC.FPnormalize;
-   FOR ALL : FPround USE ENTITY HAVOC.FPround;
+   FOR ALL : FPnormalize USE ENTITY work.FPnormalize;
+   FOR ALL : FPround USE ENTITY work.FPround;
    -- pragma synthesis_on
 
 

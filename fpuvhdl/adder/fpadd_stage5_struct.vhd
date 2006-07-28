@@ -1,4 +1,4 @@
--- VHDL Entity HAVOC.FPadd_stage5.interface
+-- VHDL Entity work.FPadd_stage5.interface
 --
 -- Created by
 -- Guillermo Marcus, gmarcus@ieee.org
@@ -39,7 +39,7 @@ ENTITY FPadd_stage5 IS
 END FPadd_stage5 ;
 
 --
--- VHDL Architecture HAVOC.FPadd_stage5.struct
+-- VHDL Architecture work.FPadd_stage5.struct
 --
 -- Created by
 -- Guillermo Marcus, gmarcus@ieee.org
@@ -54,8 +54,6 @@ END FPadd_stage5 ;
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
-
-LIBRARY HAVOC;
 
 ARCHITECTURE struct OF FPadd_stage5 IS
 
@@ -94,8 +92,8 @@ ARCHITECTURE struct OF FPadd_stage5 IS
 
    -- Optional embedded configurations
    -- pragma synthesis_off
-   FOR ALL : FPnormalize USE ENTITY HAVOC.FPnormalize;
-   FOR ALL : FPround USE ENTITY HAVOC.FPround;
+   FOR ALL : FPnormalize USE ENTITY work.FPnormalize;
+   FOR ALL : FPround USE ENTITY work.FPround;
    -- pragma synthesis_on
 
 

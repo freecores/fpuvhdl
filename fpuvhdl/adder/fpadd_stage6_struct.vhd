@@ -1,4 +1,4 @@
--- VHDL Entity HAVOC.FPadd_stage6.interface
+-- VHDL Entity work.FPadd_stage6.interface
 --
 -- Created by
 -- Guillermo Marcus, gmarcus@ieee.org
@@ -32,7 +32,7 @@ ENTITY FPadd_stage6 IS
 END FPadd_stage6 ;
 
 --
--- VHDL Architecture HAVOC.FPadd_stage6.struct
+-- VHDL Architecture work.FPadd_stage6.struct
 --
 -- Created by
 -- Guillermo Marcus, gmarcus@ieee.org
@@ -47,8 +47,6 @@ END FPadd_stage6 ;
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
-
-LIBRARY HAVOC;
 
 ARCHITECTURE struct OF FPadd_stage6 IS
 
@@ -77,7 +75,7 @@ ARCHITECTURE struct OF FPadd_stage6 IS
 
    -- Optional embedded configurations
    -- pragma synthesis_off
-   FOR ALL : PackFP USE ENTITY HAVOC.PackFP;
+   FOR ALL : PackFP USE ENTITY work.PackFP;
    -- pragma synthesis_on
 
 

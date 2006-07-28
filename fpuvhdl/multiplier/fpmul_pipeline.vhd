@@ -42,8 +42,6 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 
-LIBRARY HAVOC;
-
 ARCHITECTURE pipeline OF FPmul IS
 
    -- Architecture declarations
@@ -150,10 +148,10 @@ ARCHITECTURE pipeline OF FPmul IS
 
    -- Optional embedded configurations
    -- pragma synthesis_off
-   FOR ALL : FPmul_stage1 USE ENTITY HAVOC.FPmul_stage1;
-   FOR ALL : FPmul_stage2 USE ENTITY HAVOC.FPmul_stage2;
-   FOR ALL : FPmul_stage3 USE ENTITY HAVOC.FPmul_stage3;
-   FOR ALL : FPmul_stage4 USE ENTITY HAVOC.FPmul_stage4;
+   FOR ALL : FPmul_stage1 USE ENTITY work.FPmul_stage1;
+   FOR ALL : FPmul_stage2 USE ENTITY work.FPmul_stage2;
+   FOR ALL : FPmul_stage3 USE ENTITY work.FPmul_stage3;
+   FOR ALL : FPmul_stage4 USE ENTITY work.FPmul_stage4;
    -- pragma synthesis_on
 
 

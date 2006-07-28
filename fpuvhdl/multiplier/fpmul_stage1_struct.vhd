@@ -49,7 +49,6 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 
-LIBRARY HAVOC;
 
 ARCHITECTURE struct OF FPmul_stage1 IS
 
@@ -93,7 +92,7 @@ ARCHITECTURE struct OF FPmul_stage1 IS
 
    -- Optional embedded configurations
    -- pragma synthesis_off
-   FOR ALL : UnpackFP USE ENTITY HAVOC.UnpackFP;
+   FOR ALL : UnpackFP USE ENTITY work.UnpackFP;
    -- pragma synthesis_on
 
 

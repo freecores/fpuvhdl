@@ -1,4 +1,4 @@
--- VHDL Entity HAVOC.FPadd_stage4.interface
+-- VHDL Entity work.FPadd_stage4.interface
 --
 -- Created by
 -- Guillermo Marcus, gmarcus@ieee.org
@@ -38,7 +38,7 @@ ENTITY FPadd_stage4 IS
 END FPadd_stage4 ;
 
 --
--- VHDL Architecture HAVOC.FPadd_stage4.struct
+-- VHDL Architecture work.FPadd_stage4.struct
 --
 -- Created by
 -- Guillermo Marcus, gmarcus@ieee.org
@@ -53,8 +53,6 @@ END FPadd_stage4 ;
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
-
-LIBRARY HAVOC;
 
 ARCHITECTURE struct OF FPadd_stage4 IS
 
@@ -98,8 +96,8 @@ ARCHITECTURE struct OF FPadd_stage4 IS
 
    -- Optional embedded configurations
    -- pragma synthesis_off
-   FOR ALL : FPadd_normalize USE ENTITY HAVOC.FPadd_normalize;
-   FOR ALL : FPselComplement USE ENTITY HAVOC.FPselComplement;
+   FOR ALL : FPadd_normalize USE ENTITY work.FPadd_normalize;
+   FOR ALL : FPselComplement USE ENTITY work.FPselComplement;
    -- pragma synthesis_on
 
 

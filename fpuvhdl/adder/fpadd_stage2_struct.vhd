@@ -1,4 +1,4 @@
--- VHDL Entity HAVOC.FPadd_stage2.interface
+-- VHDL Entity work.FPadd_stage2.interface
 --
 -- Created by
 -- Guillermo Marcus, gmarcus@ieee.org
@@ -49,7 +49,7 @@ ENTITY FPadd_stage2 IS
 END FPadd_stage2 ;
 
 --
--- VHDL Architecture HAVOC.FPadd_stage2.struct
+-- VHDL Architecture work.FPadd_stage2.struct
 --
 -- Created by
 -- Guillermo Marcus, gmarcus@ieee.org
@@ -64,8 +64,6 @@ END FPadd_stage2 ;
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
-
-LIBRARY HAVOC;
 
 ARCHITECTURE struct OF FPadd_stage2 IS
 
@@ -123,8 +121,8 @@ ARCHITECTURE struct OF FPadd_stage2 IS
 
    -- Optional embedded configurations
    -- pragma synthesis_off
-   FOR ALL : FPalign USE ENTITY HAVOC.FPalign;
-   FOR ALL : FPswap USE ENTITY HAVOC.FPswap;
+   FOR ALL : FPalign USE ENTITY work.FPalign;
+   FOR ALL : FPswap USE ENTITY work.FPswap;
    -- pragma synthesis_on
 
 

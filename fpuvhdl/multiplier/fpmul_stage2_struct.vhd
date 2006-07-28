@@ -109,7 +109,8 @@ BEGIN
    -- HDL Embedded Text Block 5 eb1
    -- exp_pos 5
    EXP_pos_int <= A_EXP(7) AND B_EXP(7);
-   EXP_neg_int <= NOT (A_EXP(7) OR B_EXP(7));
+--   EXP_neg_int <= NOT(A_EXP(7) OR B_EXP(7));
+   EXP_neg_int <= '1' WHEN ( (A_EXP(7)='0' AND NOT (A_EXP=X"7F")) AND (B_EXP(7)='0' AND NOT (B_EXP=X"7F")) ) ELSE '0';
 
 
    -- ModuleWare code(v1.1) for instance 'I4' of 'add'

@@ -1,4 +1,4 @@
--- VHDL Entity HAVOC.FPadd_normalize.symbol
+-- VHDL Entity work.FPadd_normalize.symbol
 --
 -- Created by
 -- Guillermo Marcus, gmarcus@ieee.org
@@ -27,7 +27,7 @@ ENTITY FPadd_normalize IS
 END FPadd_normalize ;
 
 --
--- VHDL Architecture HAVOC.FPadd_normalize.struct
+-- VHDL Architecture work.FPadd_normalize.struct
 --
 -- Created by
 -- Guillermo Marcus, gmarcus@ieee.org
@@ -43,8 +43,6 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 USE ieee.std_logic_unsigned.all;
-
-LIBRARY HAVOC;
 
 ARCHITECTURE struct OF FPadd_normalize IS
 
@@ -75,7 +73,7 @@ ARCHITECTURE struct OF FPadd_normalize IS
 
    -- Optional embedded configurations
    -- pragma synthesis_off
-   FOR ALL : FPlzc USE ENTITY HAVOC.FPlzc;
+   FOR ALL : FPlzc USE ENTITY work.FPlzc;
    -- pragma synthesis_on
 
 

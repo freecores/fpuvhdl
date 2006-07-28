@@ -1,4 +1,4 @@
--- VHDL Entity HAVOC.FPadd_stage3.interface
+-- VHDL Entity work.FPadd_stage3.interface
 --
 -- Created by
 -- Guillermo Marcus, gmarcus@ieee.org
@@ -41,7 +41,7 @@ ENTITY FPadd_stage3 IS
 END FPadd_stage3 ;
 
 --
--- VHDL Architecture HAVOC.FPadd_stage3.struct
+-- VHDL Architecture work.FPadd_stage3.struct
 --
 -- Created by
 -- Guillermo Marcus, gmarcus@ieee.org
@@ -56,8 +56,6 @@ END FPadd_stage3 ;
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
-
-LIBRARY HAVOC;
 
 ARCHITECTURE struct OF FPadd_stage3 IS
 
@@ -86,7 +84,7 @@ ARCHITECTURE struct OF FPadd_stage3 IS
 
    -- Optional embedded configurations
    -- pragma synthesis_off
-   FOR ALL : FPinvert USE ENTITY HAVOC.FPinvert;
+   FOR ALL : FPinvert USE ENTITY work.FPinvert;
    -- pragma synthesis_on
 
 

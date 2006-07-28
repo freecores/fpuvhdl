@@ -1,4 +1,4 @@
--- VHDL Entity HAVOC.FPadd.symbol
+-- VHDL Entity work.FPadd.symbol
 --
 -- Created by
 -- Guillermo Marcus, gmarcus@ieee.org
@@ -27,7 +27,7 @@ ENTITY FPadd IS
 END FPadd ;
 
 --
--- VHDL Architecture HAVOC.FPadd.single_cycle
+-- VHDL Architecture work.FPadd.single_cycle
 --
 -- Created by
 -- Guillermo Marcus, gmarcus@ieee.org
@@ -42,8 +42,6 @@ END FPadd ;
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
-
-LIBRARY HAVOC;
 
 ARCHITECTURE single_cycle OF FPadd IS
 
@@ -220,15 +218,15 @@ ARCHITECTURE single_cycle OF FPadd IS
 
    -- Optional embedded configurations
    -- pragma synthesis_off
-   FOR ALL : FPadd_normalize USE ENTITY HAVOC.FPadd_normalize;
-   FOR ALL : FPalign USE ENTITY HAVOC.FPalign;
-   FOR ALL : FPinvert USE ENTITY HAVOC.FPinvert;
-   FOR ALL : FPnormalize USE ENTITY HAVOC.FPnormalize;
-   FOR ALL : FPround USE ENTITY HAVOC.FPround;
-   FOR ALL : FPselComplement USE ENTITY HAVOC.FPselComplement;
-   FOR ALL : FPswap USE ENTITY HAVOC.FPswap;
-   FOR ALL : PackFP USE ENTITY HAVOC.PackFP;
-   FOR ALL : UnpackFP USE ENTITY HAVOC.UnpackFP;
+   FOR ALL : FPadd_normalize USE ENTITY work.FPadd_normalize;
+   FOR ALL : FPalign USE ENTITY work.FPalign;
+   FOR ALL : FPinvert USE ENTITY work.FPinvert;
+   FOR ALL : FPnormalize USE ENTITY work.FPnormalize;
+   FOR ALL : FPround USE ENTITY work.FPround;
+   FOR ALL : FPselComplement USE ENTITY work.FPselComplement;
+   FOR ALL : FPswap USE ENTITY work.FPswap;
+   FOR ALL : PackFP USE ENTITY work.PackFP;
+   FOR ALL : UnpackFP USE ENTITY work.UnpackFP;
    -- pragma synthesis_on
 
 

@@ -42,8 +42,6 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 
-LIBRARY HAVOC;
-
 ARCHITECTURE single_cycle OF FPmul IS
 
    -- Architecture declarations
@@ -134,10 +132,10 @@ ARCHITECTURE single_cycle OF FPmul IS
 
    -- Optional embedded configurations
    -- pragma synthesis_off
-   FOR ALL : FPnormalize USE ENTITY HAVOC.FPnormalize;
-   FOR ALL : FPround USE ENTITY HAVOC.FPround;
-   FOR ALL : PackFP USE ENTITY HAVOC.PackFP;
-   FOR ALL : UnpackFP USE ENTITY HAVOC.UnpackFP;
+   FOR ALL : FPnormalize USE ENTITY work.FPnormalize;
+   FOR ALL : FPround USE ENTITY work.FPround;
+   FOR ALL : PackFP USE ENTITY work.PackFP;
+   FOR ALL : UnpackFP USE ENTITY work.UnpackFP;
    -- pragma synthesis_on
 
 
@@ -234,8 +232,10 @@ BEGIN
    -- eb6 6
    PROCESS(SIG_out_norm2,A_EXP,B_EXP, EXP_out)
    BEGIN
-      IF (EXP_out(7)='1' AND A_EXP(7)='0' AND B_EXP(7)='0') OR
-         (SIG_out_norm2(26 DOWNTO 3)="000000000000000000000000") THEN
+      IF ( EXP_out(7)='1' AND 
+		    ( (A_EXP(7)='0' AND NOT (A_EXP=X"7F")) AND 
+			   (B_EXP(7)='0' AND NOT (B_EXP=X"7F")) ) ) OR
+         (SIG_out_norm2(26 DOWNTO 3)=X"000000") THEN
          -- Underflow or zero significand
          SIG_isZ <= '1';
       ELSE
